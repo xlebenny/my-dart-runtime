@@ -6,6 +6,8 @@ COPY --from=dart-runtime /lib/x86_64-linux-gnu/libc.so.6 /lib/x86_64-linux-gnu/l
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libm.so.6 /lib/x86_64-linux-gnu/libm.so.6
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libpthread.so.0 /lib/x86_64-linux-gnu/libpthread.so.0
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libdl.so.2 /lib/x86_64-linux-gnu/libdl.so.2
+
+#nslookup
 COPY --from=dart-runtime /etc/nsswitch.conf /etc/nsswitch.conf
 COPY --from=dart-runtime /etc/hosts /etc/hosts
 COPY --from=dart-runtime /etc/resolv.conf /etc/resolv.conf
