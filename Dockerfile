@@ -16,4 +16,4 @@ COPY --from=dart-runtime /lib/x86_64-linux-gnu/libresolv.so.2 /lib/x86_64-linux-
 
 RUN \
   apk add \
-    musl
+    musl-dev
