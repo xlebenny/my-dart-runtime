@@ -15,6 +15,5 @@ COPY --from=dart-runtime /lib/x86_64-linux-gnu/libnss_dns.so.2 /lib/x86_64-linux
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libresolv.so.2 /lib/x86_64-linux-gnu/libresolv.so.2
 
 RUN \
-  apt-get update && \
-  apt-get install -y \
+  apk add \
     musl
