@@ -14,3 +14,7 @@ COPY --from=dart-runtime /etc/resolv.conf /etc/resolv.conf
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libnss_dns.so.2 /lib/x86_64-linux-gnu/libnss_dns.so.2
 COPY --from=dart-runtime /lib/x86_64-linux-gnu/libresolv.so.2 /lib/x86_64-linux-gnu/libresolv.so.2
 
+RUN \
+  apt-get update && \
+  apt-get install -y \
+    musl
